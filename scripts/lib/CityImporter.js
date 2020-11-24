@@ -4,14 +4,8 @@ const decodeHTML = (rawText) => {
     return txt.value;
 }
 
-const prepareText = (rawText) => {
-    let outText = '';
-    if (typeof rawText !== 'string') {
-        for (const attribute in rawText) if (rawText.hasOwnProperty(attribute)) outText += decodeHTML(rawText[attribute])
-        return outText;
-    }
-    return decodeHTML(rawText);
-}
+const prepareText = (rawText) => decodeHTML(rawText);
+
 
 const createJournalEntry = async (entityName, rawText, folder) => {
     await JournalEntry.create({name: entityName, content: prepareText(rawText), folder: folder})
@@ -22,15 +16,13 @@ const createCity = async (rawText) => {
     for (const attribute in jsonData) {
         if (!jsonData.hasOwnProperty(attribute)) continue;
             if (typeof jsonData[attribute] !== 'string') {
-                //await Folder.create({name: 'a', type: 'journal'});
+                const folder = await Folder.create({name: attribute, type: 'JournalEntry', parent: null});
                 for (const secAttribute in jsonData[attribute]) {
                     if (jsonData[attribute].hasOwnProperty(secAttribute))
-                        await createJournalEntry(secAttribute, jsonData[attribute][secAttribute], null);
+                        await createJournalEntry(secAttribute, jsonData[attribute][secAttribute], folder.data._id);
                 }
             }
-
-
-            await createJournalEntry(attribute, jsonData[attribute], null);
+            else await createJournalEntry(attribute, jsonData[attribute], null);
     }
 }
 
