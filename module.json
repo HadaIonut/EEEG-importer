@@ -1,7 +1,7 @@
 {
   "name": "EEEG-Importer",
   "title": "EEEG-Importer",
-  "description": "",
+  "description": "An importer for .json produced by Eigengrau's Generator",
   "version": "0.0.1",
   "minimumCoreVersion": "0.7.6",
   "compatibleCoreVersion": "0.7.6",
