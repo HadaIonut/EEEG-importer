@@ -26,14 +26,14 @@ const createJournalEntry = async (entityName, rawText, folder) => await JournalE
     folder: folder
 })
 
-const iterateJson = async (jsonData, cityName) => {
+const iterateJson = async (jsonData, cityName, folderId) => {
     let uidToIdMap = new Map();
     let createdArray = [];
     for (const attribute in jsonData) {
         if (!jsonData.hasOwnProperty(attribute)) continue;
 
         if (typeof jsonData[attribute] !== 'string') {
-            const folder = await Folder.create({name: attribute, type: 'JournalEntry', parent: null});
+            const folder = await Folder.create({name: attribute, type: 'JournalEntry', parent: folderId});
             for (const secAttribute in jsonData[attribute]) {
                 if (!jsonData[attribute].hasOwnProperty(secAttribute)) continue;
                 const newEntry = await createJournalEntry(jsonData[attribute][secAttribute].name, jsonData[attribute][secAttribute].output, folder.data._id);
@@ -44,7 +44,7 @@ const iterateJson = async (jsonData, cityName) => {
             let name = attribute === 'start' ? cityName : attribute;
             name = name === 'town' ? `Description of ${cityName}` : name;
 
-            const newEntry = await createJournalEntry(name, jsonData[attribute], null);
+            const newEntry = await createJournalEntry(name, jsonData[attribute], folderId);
             createdArray.push(newEntry.data._id);
         }
     }
@@ -71,8 +71,9 @@ const secondPass = async (ids) => {
 
 const createCity = async (rawText) => {
     const jsonData = JSON.parse(rawText);
-    const townName = getTownName(jsonData)
-    const ids = await iterateJson(jsonData, townName);
+    const townName = getTownName(jsonData);
+    const mainFolder = await Folder.create({name: townName, type: 'JournalEntry', parent: null});
+    const ids = await iterateJson(jsonData, townName, mainFolder.data._id);
     ids[0].set('town', `Description of ${townName}`);
     await secondPass(ids);
 }
