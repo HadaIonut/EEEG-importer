@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="WIP getting the individual buildings to their own folders">
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="WIP linking by id">
+      <change afterPath="$PROJECT_DIR$/test2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -96,7 +97,9 @@
       <workItem from="1606231465580" duration="9588000" />
       <workItem from="1606248534994" duration="7000" />
       <workItem from="1606251118321" duration="814000" />
-      <workItem from="1606284682635" duration="10856000" />
+      <workItem from="1606284682635" duration="15371000" />
+      <workItem from="1606376323059" duration="1201000" />
+      <workItem from="1606382625801" duration="7252000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -133,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606251930628</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="WIP linking by id">
+      <created>1606300598992</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606300598992</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +170,8 @@
     <MESSAGE value="Initial commit + very rough demo" />
     <MESSAGE value="WIP getting the individual buildings to their own folders" />
     <MESSAGE value="added folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="added folders" />
+    <MESSAGE value="WIP linking by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP linking by id" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
@@ -184,5 +195,9 @@
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937720140" />
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606302020159">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606302020159" />
   </component>
 </project>
