@@ -26,6 +26,8 @@ const createJournalEntry = async (entityName, rawText, folder) => await JournalE
     folder: folder
 })
 
+const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
 const iterateJson = async (jsonData, cityName, folderId) => {
     let uidToIdMap = new Map();
     let createdArray = [];
@@ -33,7 +35,7 @@ const iterateJson = async (jsonData, cityName, folderId) => {
         if (!jsonData.hasOwnProperty(attribute)) continue;
 
         if (typeof jsonData[attribute] !== 'string') {
-            const folder = await Folder.create({name: attribute, type: 'JournalEntry', parent: folderId});
+            const folder = await Folder.create({name: capitalize(attribute), type: 'JournalEntry', parent: folderId});
             for (const secAttribute in jsonData[attribute]) {
                 if (!jsonData[attribute].hasOwnProperty(secAttribute)) continue;
                 const newEntry = await createJournalEntry(jsonData[attribute][secAttribute].name, jsonData[attribute][secAttribute].output, folder.data._id);
@@ -72,9 +74,12 @@ const secondPass = async (ids) => {
 const createCity = async (rawText) => {
     const jsonData = JSON.parse(rawText);
     const townName = getTownName(jsonData);
+
     const mainFolder = await Folder.create({name: townName, type: 'JournalEntry', parent: null});
+
     const ids = await iterateJson(jsonData, townName, mainFolder.data._id);
     ids[0].set('town', `Description of ${townName}`);
+    
     await secondPass(ids);
 }
 

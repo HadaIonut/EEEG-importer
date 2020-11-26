@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Linking complete">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="The entire city is now created in a folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
     </list>
@@ -96,7 +96,9 @@
       <workItem from="1606251118321" duration="814000" />
       <workItem from="1606284682635" duration="15371000" />
       <workItem from="1606376323059" duration="1201000" />
-      <workItem from="1606382625801" duration="8030000" />
+      <workItem from="1606382625801" duration="8743000" />
+      <workItem from="1606403382489" duration="1563000" />
+      <workItem from="1606415975187" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -147,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606390581663</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="The entire city is now created in a folder">
+      <created>1606391279945</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606391279945</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +185,8 @@
     <MESSAGE value="added folders" />
     <MESSAGE value="WIP linking by id" />
     <MESSAGE value="Linking complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Linking complete" />
+    <MESSAGE value="The entire city is now created in a folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="The entire city is now created in a folder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
@@ -191,11 +201,11 @@
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606284722711">
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606391285166">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="872" y="288" key="Vcs.Push.Dialog.v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937729875" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606284722711" />
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606391285166" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604937720140">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
