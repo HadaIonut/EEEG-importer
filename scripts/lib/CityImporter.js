@@ -41,45 +41,58 @@ const createActor = async (entityName, rawText, folder) => await Actor.create({
 
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
+const createAndUpdateActor = (uidToActorIdMap, createdActorsArray) => async (actorData, NPCFolder) => {
+    const newActor = await createActor(actorData.name, actorData.output, NPCFolder.data._id);
+    uidToActorIdMap.set(actorData.key, newActor.data._id);
+    createdActorsArray.push(newActor.data._id);
+}
+
+const createAndUpdateJournal = (uidToIdMap, createdArray) => async (journalData, folder) => {
+    const newEntry = await createJournalEntry(journalData.name, journalData.output, folder.data._id);
+    uidToIdMap.set(journalData.key, newEntry.data._id);
+    createdArray.push(newEntry.data._id);
+}
+
+const parseSecAttributes = async (primaryAttribute, attributeType, createActor, createJournal, NPCsAsActors, folderId) => {
+    const folder = await Folder.create({name: capitalize(attributeType), type: 'JournalEntry', parent: folderId});
+    let NPCFolder;
+    if (NPCsAsActors && attributeType === 'npcs') NPCFolder = await Folder.create({
+        name: capitalize(attributeType),
+        type: 'Actor',
+        parent: null
+    });
+
+    for (const secAttribute in primaryAttribute) {
+        if (!primaryAttribute.hasOwnProperty(secAttribute)) continue;
+
+        if (NPCsAsActors && attributeType === 'npcs') await createActor(primaryAttribute[secAttribute], NPCFolder);
+        await createJournal(primaryAttribute[secAttribute], folder);
+    }
+}
+
+const parseMainAttributes = async (attribute, cityName, attributeData, folderId, createdArray) => {
+    let name = attribute === 'start' ? cityName : attribute;
+    name = name === 'town' ? `Description of ${cityName}` : name;
+
+    const newEntry = await createJournalEntry(name, attributeData, folderId);
+    createdArray.push(newEntry.data._id);
+}
+
 const iterateJson = async (jsonData, cityName, folderId, NPCsAsActors) => {
-    let uidToIdMap = new Map();
+    let uidToIdMap = new Map(), uidToActorIdMap = new Map();
     let createdArray = [], createdActorsArray = [];
-    let uidToActorIdMap = new Map();
+    let actorCreateMethod = createAndUpdateActor(uidToActorIdMap, createdActorsArray);
+    let journalCreateMethod = createAndUpdateJournal(uidToIdMap, createdArray);
+
     for (const attribute in jsonData) {
         if (!jsonData.hasOwnProperty(attribute)) continue;
 
-        if (typeof jsonData[attribute] !== 'string') {
-            const folder = await Folder.create({name: capitalize(attribute), type: 'JournalEntry', parent: folderId});
-            let NPCFolder;
-            if (NPCsAsActors && attribute === 'npcs') NPCFolder = await Folder.create({
-                name: capitalize(attribute),
-                type: 'Actor',
-                parent: null
-            });
+        if (typeof jsonData[attribute] !== 'string')
+            await parseSecAttributes(jsonData[attribute], attribute, actorCreateMethod, journalCreateMethod, NPCsAsActors, folderId);
 
-            for (const secAttribute in jsonData[attribute]) {
-                if (!jsonData[attribute].hasOwnProperty(secAttribute)) continue;
-
-                if (NPCsAsActors && attribute === 'npcs') {
-                    const newActor = await createActor(jsonData[attribute][secAttribute].name, jsonData[attribute][secAttribute].output, NPCFolder.data._id);
-                    uidToActorIdMap.set(jsonData[attribute][secAttribute].key, newActor.data._id);
-                    createdActorsArray.push(newActor.data._id);
-                }
-
-                const newEntry = await createJournalEntry(jsonData[attribute][secAttribute].name, jsonData[attribute][secAttribute].output, folder.data._id);
-                uidToIdMap.set(jsonData[attribute][secAttribute].key, newEntry.data._id);
-                createdArray.push(newEntry.data._id);
-            }
-        } else {
-            let name = attribute === 'start' ? cityName : attribute;
-            name = name === 'town' ? `Description of ${cityName}` : name;
-
-            const newEntry = await createJournalEntry(name, jsonData[attribute], folderId);
-            createdArray.push(newEntry.data._id);
-        }
+        else await parseMainAttributes(attribute, cityName, jsonData[attribute], folderId, createdArray);
     }
     return [[uidToIdMap, createdArray], [uidToActorIdMap, createdActorsArray]]
-    //return [uidToIdMap, uidToActorIdMap ,createdArray];
 }
 
 const secondPassJournals = async (ids) => {

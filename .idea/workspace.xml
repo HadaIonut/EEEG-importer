@@ -19,12 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Added capitalization">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Added the option to create NPCs as actors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/importer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/importer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,7 @@
       <workItem from="1606403382489" duration="1563000" />
       <workItem from="1606415975187" duration="2831000" />
       <workItem from="1606764648596" duration="60000" />
-      <workItem from="1607410257113" duration="7087000" />
+      <workItem from="1607410257113" duration="12670000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606416046316</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added the option to create NPCs as actors">
+      <created>1607422095944</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607422095944</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +203,8 @@
     <MESSAGE value="Linking complete" />
     <MESSAGE value="The entire city is now created in a folder" />
     <MESSAGE value="Added capitalization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added capitalization" />
+    <MESSAGE value="Added the option to create NPCs as actors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the option to create NPCs as actors" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
