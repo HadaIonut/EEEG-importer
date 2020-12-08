@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Added the option to create NPCs as actors">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Separated the iterateJson method into more functions that are more organized">
+      <change afterPath="$PROJECT_DIR$/scripts/Utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/importer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/importer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Foundry-mgl" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -100,7 +103,9 @@
       <workItem from="1606403382489" duration="1563000" />
       <workItem from="1606415975187" duration="2831000" />
       <workItem from="1606764648596" duration="60000" />
-      <workItem from="1607410257113" duration="12670000" />
+      <workItem from="1607410257113" duration="13424000" />
+      <workItem from="1607429854057" duration="170000" />
+      <workItem from="1607430067144" duration="13192000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -172,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607422095944</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Separated the iterateJson method into more functions that are more organized">
+      <created>1607429151576</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607429151576</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +216,8 @@
     <MESSAGE value="The entire city is now created in a folder" />
     <MESSAGE value="Added capitalization" />
     <MESSAGE value="Added the option to create NPCs as actors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the option to create NPCs as actors" />
+    <MESSAGE value="Separated the iterateJson method into more functions that are more organized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated the iterateJson method into more functions that are more organized" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
@@ -216,10 +229,11 @@
     </state>
     <state x="1060" y="310" key="FileChooserDialogImpl/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604936813183" />
     <state x="795" y="317" key="FileChooserDialogImpl/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606764707002" />
-    <state x="781" y="200" key="SettingsEditor" timestamp="1604937514914">
-      <screen x="0" y="30" width="2560" height="1050" />
+    <state x="586" y="208" key="SettingsEditor" timestamp="1607429284250">
+      <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
+    <state x="586" y="208" key="SettingsEditor/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607429284250" />
     <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606416056237">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>

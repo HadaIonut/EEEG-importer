@@ -1,8 +1,23 @@
 <div>
     <div>
+        <label for="NPCsActors"> Import NPCs as actors: </label>
         <input type="checkbox" id="NPCsActors" name="NPCsActors" value="Actors">
-        <label for="NPCsActors"> Import NPCs as actors </label>
+    </div>
+    <div id="customLocationDiv" >
+        <label for="customLocation">Target folder for NPCs: </label>
+        <select name="customLocation" id="customLocation">
+            <option value="default"> Default </option>
+            <option value="null"> Main Page </option>
+        </select>
+    </div>
+    <div id="customLocationDivActors" >
+        <label for="customLocationActor">Target folder for actors: </label>
+        <select name="customLocation" id="customLocationActor">
+            <option value="default"> Default </option>
+            <option value="null"> Main Page </option>
+        </select>
     </div>
     <div class="import-options">Import text</div>
-    <textarea class="text-input" name="text" style="white-space: pre-wrap"></textarea>
+    <textarea class="text-input" name="text" style="white-space: pre-wrap" id="text-input"></textarea>
+    <button id="submit"> Import!</button>
 </div>

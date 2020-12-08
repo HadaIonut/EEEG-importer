@@ -1,3 +1,5 @@
+import {loading} from "../Utils.js";
+
 const decodeHTML = (rawText) => {
     const txt = document.createElement("textarea");
     txt.innerHTML = rawText;
@@ -42,35 +44,42 @@ const createActor = async (entityName, rawText, folder) => await Actor.create({
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 const createAndUpdateActor = (uidToActorIdMap, createdActorsArray) => async (actorData, NPCFolder) => {
-    const newActor = await createActor(actorData.name, actorData.output, NPCFolder.data._id);
+    const newActor = await createActor(actorData.name, actorData.output, NPCFolder);
     uidToActorIdMap.set(actorData.key, newActor.data._id);
     createdActorsArray.push(newActor.data._id);
 }
 
 const createAndUpdateJournal = (uidToIdMap, createdArray) => async (journalData, folder) => {
-    const newEntry = await createJournalEntry(journalData.name, journalData.output, folder.data._id);
+    const newEntry = await createJournalEntry(journalData.name, journalData.output, folder);
     uidToIdMap.set(journalData.key, newEntry.data._id);
     createdArray.push(newEntry.data._id);
 }
 
-const parseSecAttributes = async (primaryAttribute, attributeType, createActor, createJournal, NPCsAsActors, folderId) => {
-    const folder = await Folder.create({name: capitalize(attributeType), type: 'JournalEntry', parent: folderId});
-    let NPCFolder;
-    if (NPCsAsActors && attributeType === 'npcs') NPCFolder = await Folder.create({
-        name: capitalize(attributeType),
-        type: 'Actor',
-        parent: null
-    });
+const parseSecAttributes = (NPCsAsActors, folderId, loadingBar, hasCustomNPCLocation, location) =>
+    async (primaryAttribute, attributeType, createActor, createJournal) => {
+        let folder, NPCFolder;
+        if (!(hasCustomNPCLocation[0] && attributeType === 'npcs'))
+            folder = await Folder.create({name: capitalize(attributeType), type: 'JournalEntry', parent: folderId});
 
-    for (const secAttribute in primaryAttribute) {
-        if (!primaryAttribute.hasOwnProperty(secAttribute)) continue;
+        if (NPCsAsActors && attributeType === 'npcs' && !hasCustomNPCLocation[1])
+            NPCFolder = await Folder.create({
+                name: capitalize(attributeType),
+                type: 'Actor',
+                parent: null
+            });
 
-        if (NPCsAsActors && attributeType === 'npcs') await createActor(primaryAttribute[secAttribute], NPCFolder);
-        await createJournal(primaryAttribute[secAttribute], folder);
+        for (const secAttribute in primaryAttribute) {
+            if (!primaryAttribute.hasOwnProperty(secAttribute)) continue;
+            loadingBar();
+
+            if (NPCsAsActors && attributeType === 'npcs')
+                await createActor(primaryAttribute[secAttribute], hasCustomNPCLocation[1] ? location[1] : NPCFolder.data._id);
+            await createJournal(primaryAttribute[secAttribute], hasCustomNPCLocation[0] && attributeType === 'npcs' ? location[0] : folder.data._id);
+        }
     }
-}
 
 const parseMainAttributes = async (attribute, cityName, attributeData, folderId, createdArray) => {
+
     let name = attribute === 'start' ? cityName : attribute;
     name = name === 'town' ? `Description of ${cityName}` : name;
 
@@ -78,7 +87,7 @@ const parseMainAttributes = async (attribute, cityName, attributeData, folderId,
     createdArray.push(newEntry.data._id);
 }
 
-const iterateJson = async (jsonData, cityName, folderId, NPCsAsActors) => {
+const iterateJson = async (jsonData, cityName, folderId, NPCsAsActors, loadingBar, parseSecAttr) => {
     let uidToIdMap = new Map(), uidToActorIdMap = new Map();
     let createdArray = [], createdActorsArray = [];
     let actorCreateMethod = createAndUpdateActor(uidToActorIdMap, createdActorsArray);
@@ -87,17 +96,19 @@ const iterateJson = async (jsonData, cityName, folderId, NPCsAsActors) => {
     for (const attribute in jsonData) {
         if (!jsonData.hasOwnProperty(attribute)) continue;
 
+        loadingBar();
         if (typeof jsonData[attribute] !== 'string')
-            await parseSecAttributes(jsonData[attribute], attribute, actorCreateMethod, journalCreateMethod, NPCsAsActors, folderId);
+            await parseSecAttr(jsonData[attribute], attribute, actorCreateMethod, journalCreateMethod);
 
         else await parseMainAttributes(attribute, cityName, jsonData[attribute], folderId, createdArray);
     }
     return [[uidToIdMap, createdArray], [uidToActorIdMap, createdActorsArray]]
 }
 
-const secondPassJournals = async (ids) => {
+const secondPassJournals = async (ids, loadingBar) => {
     const allJournals = game.journal;
     for (const id of ids[1]) {
+        loadingBar();
         const journal = allJournals.get(id);
         const journalClone = JSON.parse(JSON.stringify(journal));
         journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
@@ -134,16 +145,29 @@ const secondPassActors = async (ids) => {
     }
 }
 
-const createCity = async (rawText, NPCsAsActors) => {
+const getTownSize = (jsonData) => {
+    let townSize = 0;
+    townSize += Object.keys(jsonData).length;
+    for (const attribute in jsonData) {
+        if (!jsonData.hasOwnProperty(attribute)) continue;
+
+        if (typeof jsonData[attribute] !== 'string') townSize += Object.keys(jsonData[attribute]).length * 2;
+    }
+    return townSize;
+}
+
+const createCity = async (rawText, NPCsAsActors, hasCustomNPCLocation, location) => {
     const jsonData = JSON.parse(rawText);
+    const loadingBar = loading('Importing city.')(0)(getTownSize(jsonData) - 1);
     const townName = getTownName(jsonData);
 
     const mainFolder = await Folder.create({name: townName, type: 'JournalEntry', parent: null});
+    const secAttrParser = parseSecAttributes(NPCsAsActors, mainFolder.data._id, loadingBar, hasCustomNPCLocation, location);
 
-    const ids = await iterateJson(jsonData, townName, mainFolder.data._id, NPCsAsActors);
+    const ids = await iterateJson(jsonData, townName, mainFolder.data._id, NPCsAsActors, loadingBar, secAttrParser);
     ids[0][0].set('town', `Description of ${townName}`);
 
-    await secondPassJournals(ids[0]);
+    await secondPassJournals(ids[0], loadingBar);
     if (NPCsAsActors) await secondPassActors(ids[1]);
 }
 
