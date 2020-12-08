@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="The entire city is now created in a folder">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Added capitalization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/importer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/importer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Foundry-mgl" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -98,7 +101,9 @@
       <workItem from="1606376323059" duration="1201000" />
       <workItem from="1606382625801" duration="8743000" />
       <workItem from="1606403382489" duration="1563000" />
-      <workItem from="1606415975187" duration="24000" />
+      <workItem from="1606415975187" duration="2831000" />
+      <workItem from="1606764648596" duration="60000" />
+      <workItem from="1607410257113" duration="7087000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -156,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606391279945</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added capitalization">
+      <created>1606416046316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606416046316</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,26 +198,28 @@
     <MESSAGE value="WIP linking by id" />
     <MESSAGE value="Linking complete" />
     <MESSAGE value="The entire city is now created in a folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="The entire city is now created in a folder" />
+    <MESSAGE value="Added capitalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added capitalization" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="949" y="333" key="EditFileWatcherDialog/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937408492" />
-    <state x="1060" y="310" key="FileChooserDialogImpl" timestamp="1604936813183">
-      <screen x="0" y="30" width="2560" height="1050" />
+    <state x="795" y="317" key="FileChooserDialogImpl" timestamp="1606764707002">
+      <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="1060" y="310" key="FileChooserDialogImpl/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604936813183" />
+    <state x="795" y="317" key="FileChooserDialogImpl/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606764707002" />
     <state x="781" y="200" key="SettingsEditor" timestamp="1604937514914">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606391285166">
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1606416056237">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="872" y="288" key="Vcs.Push.Dialog.v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937729875" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606391285166" />
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606416056237" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604937720140">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>

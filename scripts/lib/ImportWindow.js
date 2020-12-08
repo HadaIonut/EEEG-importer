@@ -18,7 +18,7 @@ export default class ImportWindow extends Application {
     activateListeners(html) {
         super.activateListeners(html);
         html.find(".text-input").change(()=>{
-            createCity($("[name='text']")[0].value);
+            createCity($("[name='text']")[0].value, $("[name='NPCsActors']")[0].checked);
         });
     }
 }
