@@ -1,3 +1,18 @@
+div {
+    padding-bottom: 5px;
+}
 
+.inputDescriptor {
+    font-weight: bold;
+}
 
+.selectorDiv {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    padding-left: 5px;
+    margin-left: 5px;
+}
 /*# sourceMappingURL=module.css.map */
