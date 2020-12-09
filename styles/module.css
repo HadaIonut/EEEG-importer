@@ -41,7 +41,7 @@
 }
 
 table {
-    font-family: ScalySans;
+    font-family: ScalySans, serif;
     width: 100%;
     margin-bottom: 1em;
     font-size: 10pt;
@@ -55,12 +55,12 @@ div.EEEG table.a {
 }
 
 div.EEEG table em {
-    font-family: ScalySans;
+    font-family: ScalySans, serif;
     font-style: italic
 }
 
 div.EEEG table strong {
-    font-family: ScalySans;
+    font-family: ScalySans, serif;
     font-weight: 800;
     letter-spacing: -0.02em
 }
@@ -78,13 +78,15 @@ div.EEEG table thead th {
 
 div.EEEG table tbody tr td {
     padding: .3em .1em;
+    max-width: 100px;
+
 }
 
 .descriptive {
     display:inline-block;
     margin-bottom:1em;
     background-color:#faf7ea;
-    font-family:ScalySans;
+    font-family:ScalySans, serif;
     border-style:solid;
     border-width:7px;
     border-image: url("/src/Resources/sidebars.png") 12 round;
@@ -100,11 +102,11 @@ div.EEEG table tbody tr td {
     padding-top:.8em
 }
 .descriptive em{
-    font-family:ScalySans;
+    font-family:ScalySans, serif;
     font-style:italic
 }
 .descriptive strong{
-    font-family:ScalySans;
+    font-family:ScalySans, serif;
     font-weight:800;
     letter-spacing:-0.02em
 }
@@ -116,7 +118,7 @@ pre+.descriptive{
     display:inline-block;
     margin-bottom:1em;
     background-color:#faf7ea;
-    font-family:ScalySans;
+    font-family:ScalySans, serif;
     border-style:solid;
     border-width:7px;
     border-image: url("/src/Resources/sidebars.png") 12 round;
@@ -133,11 +135,11 @@ pre+.descriptive{
     padding-top:.8em
 }
 .descriptive em{
-    font-family:ScalySans;
+    font-family:ScalySans, serif;
     font-style:italic
 }
 .descriptive strong{
-    font-family:ScalySans;
+    font-family:ScalySans, serif;
     font-weight:800;
     letter-spacing:-0.02em
 }
@@ -146,7 +148,7 @@ pre+.descriptive{
 }
 
 div.EEEG blockquote {
-    font-family: Scaly Sans;
+    font-family: Scaly Sans, serif;
     box-sizing: border-box;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -159,11 +161,11 @@ div.EEEG blockquote {
     box-shadow: 1px 4px 14px #888
 }
 div.EEEG blockquote em {
-    font-family: Scaly Sans;
+    font-family: Scaly Sans, serif;
     font-style: italic
 }
 div.EEEG blockquote strong {
-    font-family: Scaly Sans;
+    font-family: Scaly Sans, serif;
     font-weight: 800;
     letter-spacing: -0.02em
 }
@@ -185,12 +187,13 @@ div.EEEG blockquote h5 {
 
 .first-character {
     float: left;
-    font-family: Solbera Imitation;
+    font-family: Solbera Imitation, serif;
     font-size: 75px;
     line-height: 60px;
     padding-top: 4px;
     padding-right: 8px;
     padding-left: 3px;
 }
+
 
 /*# sourceMappingURL=module.css.map */
