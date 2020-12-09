@@ -2,7 +2,7 @@
   "name": "EEEG-Importer",
   "title": "EEEG-Importer",
   "description": "An importer for .json produced by Eigengrau's Generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.7.6",
   "compatibleCoreVersion": "0.7.6",
   "author": "HadaIonut",

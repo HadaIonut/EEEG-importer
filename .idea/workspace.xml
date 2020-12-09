@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Custom locations for NPCs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/importer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/importer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module.json" beforeDir="false" afterPath="$PROJECT_DIR$/module.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +61,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Foundry-mgl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template" />
-      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\.github" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personalProjects\EEEG-importer\resources" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\styles" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\scripts\lib" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\scripts" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\languages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\.github" />
     </key>
   </component>
@@ -104,7 +103,8 @@
       <workItem from="1607410257113" duration="13424000" />
       <workItem from="1607429854057" duration="170000" />
       <workItem from="1607430067144" duration="14384000" />
-      <workItem from="1607503304258" duration="1827000" />
+      <workItem from="1607503304258" duration="7586000" />
+      <workItem from="1607515299546" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -190,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607446146005</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Some css stuff">
+      <created>1607505479625</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607505479625</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Copy paste classes from EEEG">
+      <created>1607515174578</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607515174578</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +238,9 @@
     <MESSAGE value="Added the option to create NPCs as actors" />
     <MESSAGE value="Separated the iterateJson method into more functions that are more organized" />
     <MESSAGE value="Custom locations for NPCs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom locations for NPCs" />
+    <MESSAGE value="Some css stuff" />
+    <MESSAGE value="Copy paste classes from EEEG" />
+    <option name="LAST_COMMIT_MESSAGE" value="Copy paste classes from EEEG" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
@@ -241,11 +257,11 @@
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
     <state x="586" y="208" key="SettingsEditor/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607429284250" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1607447279072">
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1607515179709">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="872" y="288" key="Vcs.Push.Dialog.v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937729875" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607447279072" />
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607515179709" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604937720140">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
