@@ -1,28 +1,28 @@
 <div>
-    <div>
+    <div class="importWindowDiv">
         <p>
             Insert the JSON exported by EEEG into the text field below.
         </p>
     </div>
-    <div class="selectorDiv">
+    <div class="selectorDiv importWindowDiv">
         <label for="NPCsActors" class="inputDescriptor"> Import NPCs as actors: </label>
         <input type="checkbox" id="NPCsActors" name="NPCsActors" value="Actors"/>
     </div>
-    <div id="customLocationDiv" class="selectorDiv">
+    <div id="customLocationDiv" class="selectorDiv importWindowDiv">
         <label for="customLocation" class="inputDescriptor">Target folder for NPCs: </label>
-        <select name="customLocation" id="customLocation">
+        <select name="customLocation" id="customLocation" class="locationsSelect">
             <option value="default"> Default </option>
             <option value="null"> Main Page </option>
         </select>
     </div>
-    <div id="customLocationDivActors" class="selectorDiv">
+    <div id="customLocationDivActors" class="selectorDiv importWindowDiv">
         <label for="customLocationActor" class="inputDescriptor">Target folder for actors: </label>
-        <select name="customLocation" id="customLocationActor">
+        <select name="customLocation" id="customLocationActor" class="locationsSelect">
             <option value="default"> Default </option>
             <option value="null"> Main Page </option>
         </select>
     </div>
-    <div class="inputDescriptor">Import text</div>
+    <div class="inputDescriptor importWindowDiv">Import text</div>
     <textarea class="text-input" name="text" style="white-space: pre-wrap" id="text-input"></textarea>
     <button id="submit"> Import! </button>
 </div>

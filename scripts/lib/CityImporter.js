@@ -44,13 +44,13 @@ const createActor = async (entityName, rawText, folder) => await Actor.create({
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 const createAndUpdateActor = (uidToActorIdMap, createdActorsArray) => async (actorData, NPCFolder) => {
-    const newActor = await createActor(actorData.name, actorData.output, NPCFolder);
+    const newActor = await createActor(actorData.name, `<div class="EEEG">${actorData.output}</div>`, NPCFolder);
     uidToActorIdMap.set(actorData.key, newActor.data._id);
     createdActorsArray.push(newActor.data._id);
 }
 
 const createAndUpdateJournal = (uidToIdMap, createdArray) => async (journalData, folder) => {
-    const newEntry = await createJournalEntry(journalData.name, journalData.output, folder);
+    const newEntry = await createJournalEntry(journalData.name, `<div class="EEEG">${journalData.output}</div>`, folder);
     uidToIdMap.set(journalData.key, newEntry.data._id);
     createdArray.push(newEntry.data._id);
 }

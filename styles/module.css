@@ -1,4 +1,4 @@
-div {
+.importWindowDiv {
     padding-bottom: 5px;
 }
 
@@ -11,7 +11,7 @@ div {
     align-items: center;
 }
 
-select {
+.locationsSelect {
     padding-left: 5px;
     margin-left: 5px;
 }
@@ -49,35 +49,35 @@ table {
     table-layout: auto;
 }
 
-table.a {
+div.EEEG table.a {
     table-layout: auto;
     width: 180px;
 }
 
-table em {
+div.EEEG table em {
     font-family: ScalySans;
     font-style: italic
 }
 
-table strong {
+div.EEEG table strong {
     font-family: ScalySans;
     font-weight: 800;
     letter-spacing: -0.02em
 }
 
-table thead {
+div.EEEG table thead {
     font-weight: 800
 }
 
-table thead th {
+div.EEEG table thead th {
     vertical-align: bottom;
     padding-bottom: .3em;
     padding-right: .1em;
     padding-left: .1em
 }
 
-table tbody tr td {
-    padding: .3em .1em
+div.EEEG table tbody tr td {
+    padding: .3em .1em;
 }
 
 .descriptive {
@@ -145,7 +145,7 @@ pre+.descriptive{
     margin-top:8px
 }
 
-blockquote {
+div.EEEG blockquote {
     font-family: Scaly Sans;
     box-sizing: border-box;
     margin-top: 2em;
@@ -158,28 +158,28 @@ blockquote {
     border-image-outset: 9px 0;
     box-shadow: 1px 4px 14px #888
 }
-blockquote em {
+div.EEEG blockquote em {
     font-family: Scaly Sans;
     font-style: italic
 }
-blockquote strong {
+div.EEEG blockquote strong {
     font-family: Scaly Sans;
     font-weight: 800;
     letter-spacing: -0.02em
 }
-blockquote p,
-blockquote ul {
+div.EEEG blockquote p,
+div.EEEG blockquote ul {
     font-size: .352cm;
     line-height: 1.1em
 }
-pre+blockquote,
-h2+blockquote,
-h3+blockquote,
-h4+blockquote,
-h5+blockquote {
+div.EEEG pre+blockquote,
+div.EEEG h2+blockquote,
+div.EEEG h3+blockquote,
+div.EEEG h4+blockquote,
+div.EEEG h5+blockquote {
     margin-top: 13px
 }
-blockquote h5 {
+div.EEEG blockquote h5 {
     margin-top: 0
 }
 
