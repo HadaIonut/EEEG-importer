@@ -15,4 +15,182 @@ select {
     padding-left: 5px;
     margin-left: 5px;
 }
+
+.dotted {
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+    cursor: help;
+}
+
+.highlight {
+    animation-name: highlightFade;
+    animation-duration: 4s;
+    /* font-family: Bookinsanity;
+    font-size: 18px; */
+    color: black;
+}
+
+@keyframes highlightFade {
+
+    from {
+        background-color: #49A758;
+    }
+    to {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+table {
+    font-family: ScalySans;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 10pt;
+    line-height: 1.1em;
+    table-layout: auto;
+}
+
+table.a {
+    table-layout: auto;
+    width: 180px;
+}
+
+table em {
+    font-family: ScalySans;
+    font-style: italic
+}
+
+table strong {
+    font-family: ScalySans;
+    font-weight: 800;
+    letter-spacing: -0.02em
+}
+
+table thead {
+    font-weight: 800
+}
+
+table thead th {
+    vertical-align: bottom;
+    padding-bottom: .3em;
+    padding-right: .1em;
+    padding-left: .1em
+}
+
+table tbody tr td {
+    padding: .3em .1em
+}
+
+.descriptive {
+    display:inline-block;
+    margin-bottom:1em;
+    background-color:#faf7ea;
+    font-family:ScalySans;
+    border-style:solid;
+    border-width:7px;
+    border-image: url("/src/Resources/sidebars.png") 12 round;
+    border-image-outset: 4px;
+    box-shadow:0 0 6px #faf7ea
+}
+.descriptive p {
+    display:block;
+    padding-bottom:0;
+    line-height:1.5em
+}
+.descriptive p+p{
+    padding-top:.8em
+}
+.descriptive em{
+    font-family:ScalySans;
+    font-style:italic
+}
+.descriptive strong{
+    font-family:ScalySans;
+    font-weight:800;
+    letter-spacing:-0.02em
+}
+pre+.descriptive{
+    margin-top:8px
+}
+
+.descriptive {
+    display:inline-block;
+    margin-bottom:1em;
+    background-color:#faf7ea;
+    font-family:ScalySans;
+    border-style:solid;
+    border-width:7px;
+    border-image: url("/src/Resources/sidebars.png") 12 round;
+    border-image-outset:4px;
+    box-shadow:0 0 6px #faf7ea
+}
+
+.descriptive p {
+    display:block;
+    padding-bottom:0;
+    line-height:1.5em
+}
+.descriptive p+p{
+    padding-top:.8em
+}
+.descriptive em{
+    font-family:ScalySans;
+    font-style:italic
+}
+.descriptive strong{
+    font-family:ScalySans;
+    font-weight:800;
+    letter-spacing:-0.02em
+}
+.pre+.descriptive{
+    margin-top:8px
+}
+
+blockquote {
+    font-family: Scaly Sans;
+    box-sizing: border-box;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 5px 10px;
+    background-color: #e5e4c1;
+    border-style: solid;
+    border-width: 11px;
+    border-image: url("../resources/note-wrap.png") 11;
+    border-image-outset: 9px 0;
+    box-shadow: 1px 4px 14px #888
+}
+blockquote em {
+    font-family: Scaly Sans;
+    font-style: italic
+}
+blockquote strong {
+    font-family: Scaly Sans;
+    font-weight: 800;
+    letter-spacing: -0.02em
+}
+blockquote p,
+blockquote ul {
+    font-size: .352cm;
+    line-height: 1.1em
+}
+pre+blockquote,
+h2+blockquote,
+h3+blockquote,
+h4+blockquote,
+h5+blockquote {
+    margin-top: 13px
+}
+blockquote h5 {
+    margin-top: 0
+}
+
+.first-character {
+    float: left;
+    font-family: Solbera Imitation;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
 /*# sourceMappingURL=module.css.map */
