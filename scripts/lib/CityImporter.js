@@ -169,6 +169,8 @@ const createCity = async (rawText, NPCsAsActors, hasCustomNPCLocation, location)
 
     await secondPassJournals(ids[0], loadingBar);
     if (NPCsAsActors) await secondPassActors(ids[1]);
+
+    ui.notifications.info("Your city has been imported successfully");
 }
 
 export {createCity}
