@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Prep for release">
-      <change afterPath="$PROJECT_DIR$/resources/sidebars.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/importer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/importer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,8 @@
       <workItem from="1607515299546" duration="632000" />
       <workItem from="1607522111094" duration="6073000" />
       <workItem from="1607776481204" duration="29000" />
-      <workItem from="1607929171173" duration="1192000" />
+      <workItem from="1607929171173" duration="1816000" />
+      <workItem from="1608033246935" duration="93000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -231,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607527538966</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Done notification + proper linking into css">
+      <created>1607941526705</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607941526705</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +275,8 @@
     <MESSAGE value="Prep for release" />
     <MESSAGE value="Made sure the css classes only apply to entries made by the importer" />
     <MESSAGE value="Max width for tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Max width for tables" />
+    <MESSAGE value="Done notification + proper linking into css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done notification + proper linking into css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
