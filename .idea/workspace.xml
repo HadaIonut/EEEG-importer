@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Prep for release">
-      <change beforePath="$PROJECT_DIR$/module.json" beforeDir="false" afterPath="$PROJECT_DIR$/module.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +108,7 @@
       <workItem from="1607522111094" duration="6073000" />
       <workItem from="1607776481204" duration="29000" />
       <workItem from="1607929171173" duration="1816000" />
-      <workItem from="1608033246935" duration="416000" />
+      <workItem from="1608033246935" duration="2398000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -245,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608033464190</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Prep for release">
+      <created>1608033680061</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608033680061</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,12 +286,12 @@
     <MESSAGE value="Custom locations for NPCs" />
     <MESSAGE value="Some css stuff" />
     <MESSAGE value="Copy paste classes from EEEG" />
-    <MESSAGE value="Prep for release" />
     <MESSAGE value="Made sure the css classes only apply to entries made by the importer" />
     <MESSAGE value="Max width for tables" />
     <MESSAGE value="Done notification + proper linking into css" />
     <MESSAGE value="Added link to the generator." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added link to the generator." />
+    <MESSAGE value="Prep for release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prep for release" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
@@ -303,18 +308,18 @@
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
     <state x="586" y="208" key="SettingsEditor/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607429284250" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1608033484845">
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1608033685419">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="872" y="288" key="Vcs.Push.Dialog.v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937729875" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608033484845" />
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608033685419" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604937720140">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937720140" />
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606302020159">
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1608041667604">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606302020159" />
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608041667604" />
   </component>
 </project>
