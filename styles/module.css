@@ -90,7 +90,7 @@ div.EEEG table tbody tr td {
     font-family:ScalySans, serif;
     border-style:solid;
     border-width:7px;
-    border-image: url("../resources/sidebars.png") 12 round;
+    border-image: url("sidebars.png") 12 round;
     border-image-outset: 4px;
     box-shadow:0 0 6px #faf7ea
 }
@@ -125,7 +125,7 @@ div.EEEG blockquote {
     background-color: #e5e4c1;
     border-style: solid;
     border-width: 11px;
-    border-image: url("../resources/note-wrap.png") 11;
+    border-image: url("note-wrap.png") 11;
     border-image-outset: 9px 0;
     box-shadow: 1px 4px 14px #888
 }
