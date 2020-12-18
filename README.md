@@ -1,4 +1,4 @@
-# Module name
+# EEEG Importer
 ![Downloads](https://img.shields.io/github/downloads/HadaIonut/EEEG-importer/latest/module.zip?style=for-the-badge)
 ![License](https://img.shields.io/github/license/HadaIonut/EEEG-importer?style=for-the-badge)
 ![GitHub Latest Release](https://img.shields.io/github/release/HadaIonut/EEEG-importer?style=for-the-badge)
