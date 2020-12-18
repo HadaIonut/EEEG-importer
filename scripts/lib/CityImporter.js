@@ -19,7 +19,7 @@ const prepareText = (rawText) => {
 }
 
 const getTownName = (jsonData) => {
-    return (jsonData.start.match(/Description of (.*?)&/))[1];
+    return (jsonData.start.match(/Description of (.*?)</))[1];
 }
 
 const createJournalEntry = async (entityName, rawText, folder) => await JournalEntry.create({
@@ -58,10 +58,10 @@ const createAndUpdateJournal = (uidToIdMap, createdArray) => async (journalData,
 const parseSecAttributes = (NPCsAsActors, folderId, loadingBar, hasCustomNPCLocation, location) =>
     async (primaryAttribute, attributeType, createActor, createJournal) => {
         let folder, NPCFolder;
-        if (!(hasCustomNPCLocation[0] && attributeType === 'npcs'))
+        if (!(hasCustomNPCLocation[0] && attributeType === 'NPCs'))
             folder = await Folder.create({name: capitalize(attributeType), type: 'JournalEntry', parent: folderId});
 
-        if (NPCsAsActors && attributeType === 'npcs' && !hasCustomNPCLocation[1])
+        if (NPCsAsActors && attributeType === 'NPCs' && !hasCustomNPCLocation[1])
             NPCFolder = await Folder.create({
                 name: capitalize(attributeType),
                 type: 'Actor',
@@ -72,9 +72,9 @@ const parseSecAttributes = (NPCsAsActors, folderId, loadingBar, hasCustomNPCLoca
             if (!primaryAttribute.hasOwnProperty(secAttribute)) continue;
             loadingBar();
 
-            if (NPCsAsActors && attributeType === 'npcs')
+            if (NPCsAsActors && attributeType === 'NPCs')
                 await createActor(primaryAttribute[secAttribute], hasCustomNPCLocation[1] ? location[1] : NPCFolder.data._id);
-            await createJournal(primaryAttribute[secAttribute], hasCustomNPCLocation[0] && attributeType === 'npcs' ? location[0] : folder.data._id);
+            await createJournal(primaryAttribute[secAttribute], hasCustomNPCLocation[0] && attributeType === 'NPCs' ? location[0] : folder.data._id);
         }
     }
 

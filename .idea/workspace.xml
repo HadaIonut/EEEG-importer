@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Prep for release">
+      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +109,10 @@
       <workItem from="1607522111094" duration="6073000" />
       <workItem from="1607776481204" duration="29000" />
       <workItem from="1607929171173" duration="1816000" />
-      <workItem from="1608033246935" duration="2398000" />
+      <workItem from="1608033246935" duration="3006000" />
+      <workItem from="1608136285221" duration="27000" />
+      <workItem from="1608136448781" duration="291000" />
+      <workItem from="1608273561671" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -250,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608033680061</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Prep for release">
+      <created>1608041887371</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608041887371</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,21 +309,21 @@
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="949" y="333" key="EditFileWatcherDialog/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937408492" />
-    <state x="795" y="317" key="FileChooserDialogImpl" timestamp="1606764707002">
+    <state x="795" y="317" key="FileChooserDialogImpl" timestamp="1608136294429">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="1060" y="310" key="FileChooserDialogImpl/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604936813183" />
-    <state x="795" y="317" key="FileChooserDialogImpl/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1606764707002" />
+    <state x="795" y="317" key="FileChooserDialogImpl/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608136294429" />
     <state x="586" y="208" key="SettingsEditor" timestamp="1607429284250">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
     <state x="586" y="208" key="SettingsEditor/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607429284250" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1608033685419">
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1608041890265">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="872" y="288" key="Vcs.Push.Dialog.v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937729875" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608033685419" />
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608041890265" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604937720140">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
