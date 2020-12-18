@@ -83,38 +83,7 @@ div.EEEG table tbody tr td {
 }
 
 .descriptive {
-    display:inline-block;
-    margin-bottom:1em;
-    background-color:#faf7ea;
-    font-family:ScalySans, serif;
-    border-style:solid;
-    border-width:7px;
-    border-image: url("/src/Resources/sidebars.png") 12 round;
-    border-image-outset: 4px;
-    box-shadow:0 0 6px #faf7ea
-}
-.descriptive p {
-    display:block;
-    padding-bottom:0;
-    line-height:1.5em
-}
-.descriptive p+p{
-    padding-top:.8em
-}
-.descriptive em{
-    font-family:ScalySans, serif;
-    font-style:italic
-}
-.descriptive strong{
-    font-family:ScalySans, serif;
-    font-weight:800;
-    letter-spacing:-0.02em
-}
-pre+.descriptive{
-    margin-top:8px
-}
-
-.descriptive {
+    margin-left: 3px;
     display:inline-block;
     margin-bottom:1em;
     background-color:#faf7ea;
@@ -122,7 +91,7 @@ pre+.descriptive{
     border-style:solid;
     border-width:7px;
     border-image: url("../resources/sidebars.png") 12 round;
-    border-image-outset:4px;
+    border-image-outset: 4px;
     box-shadow:0 0 6px #faf7ea
 }
 
