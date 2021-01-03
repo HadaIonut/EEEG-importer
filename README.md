@@ -1,5 +1,6 @@
 # EEEG Importer
 ![Downloads](https://img.shields.io/github/downloads/HadaIonut/EEEG-importer/latest/module.zip?style=for-the-badge)
+![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2FEEEG-Importer&colorB=4aa94a&style=for-the-badge)
 ![License](https://img.shields.io/github/license/HadaIonut/EEEG-importer?style=for-the-badge)
 ![GitHub Latest Release](https://img.shields.io/github/release/HadaIonut/EEEG-importer?style=for-the-badge)
 ![Foundry Version](https://img.shields.io/badge/FoundryVTT-0.7.6-blueviolet?style=for-the-badge)
