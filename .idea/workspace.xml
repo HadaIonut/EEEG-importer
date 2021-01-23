@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Prep for release">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="maybe sidebar fix?">
       <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module.json" beforeDir="false" afterPath="$PROJECT_DIR$/module.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,22 +63,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template" />
+      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\.github" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personalProjects\EEEG-importer\styles" />
       <recent name="C:\personalProjects\EEEG-importer\resources" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\styles" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\scripts\lib" />
       <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\scripts" />
-      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\languages" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template" />
-      <recent name="C:\Users\Marian\OneDrive\Documents\ProiectePersonale\fvtt-module-template\.github" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -112,7 +113,12 @@
       <workItem from="1608033246935" duration="3006000" />
       <workItem from="1608136285221" duration="27000" />
       <workItem from="1608136448781" duration="291000" />
-      <workItem from="1608273561671" duration="705000" />
+      <workItem from="1608273561671" duration="4691000" />
+      <workItem from="1608309008829" duration="697000" />
+      <workItem from="1608325483020" duration="762000" />
+      <workItem from="1608570302713" duration="169000" />
+      <workItem from="1608571110754" duration="8000" />
+      <workItem from="1611388411989" duration="2178000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -261,7 +267,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608041887371</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixes">
+      <created>1608274289080</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608274289080</updated>
+    </task>
+    <task id="LOCAL-00023" summary="descriptive fix">
+      <created>1608285111008</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608285111008</updated>
+    </task>
+    <task id="LOCAL-00024" summary="maybe sidebar fix?">
+      <created>1608290509279</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608290509279</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +329,10 @@
     <MESSAGE value="Done notification + proper linking into css" />
     <MESSAGE value="Added link to the generator." />
     <MESSAGE value="Prep for release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prep for release" />
+    <MESSAGE value="Fixes" />
+    <MESSAGE value="descriptive fix" />
+    <MESSAGE value="maybe sidebar fix?" />
+    <option name="LAST_COMMIT_MESSAGE" value="maybe sidebar fix?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1604937408492">
@@ -319,11 +349,12 @@
     </state>
     <state x="781" y="200" key="SettingsEditor/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937514914" />
     <state x="586" y="208" key="SettingsEditor/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1607429284250" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2" timestamp="1608041890265">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state x="-1397" y="237" key="Vcs.Push.Dialog.v2" timestamp="1608290805347">
+      <screen x="-1920" y="32" width="1536" height="832" />
     </state>
     <state x="872" y="288" key="Vcs.Push.Dialog.v2/-1920.30.1920.1050/0.30.2560.1050@0.30.2560.1050" timestamp="1604937729875" />
-    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608041890265" />
+    <state x="-1397" y="237" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@-1920.32.1536.832" timestamp="1608290805347" />
+    <state x="654" y="296" key="Vcs.Push.Dialog.v2/-1920.32.1536.832/0.40.1920.1040@0.40.1920.1040" timestamp="1608285152075" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604937720140">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>

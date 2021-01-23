@@ -11,7 +11,10 @@ const prepareText = (rawText) => {
     const $a = $('<div />', {html: decoded});
     const located = $a.find('.link-internal');
     located.replaceWith((index, text) => {
-        const id = located[index]?.parentElement?.parentElement?.id || located[index]?.parentElement?.id;
+        const id = located[index]?.parentElement?.parentElement?.className.replace('tip ', '') ||
+            located[index]?.parentElement?.className.replace('tip ', '') ||
+            located[index]?.parentElement?.parentElement?.id ||
+            located[index]?.parentElement?.id;
         if (text.includes('Description of')) return `@JournalEntry[town]{${text}}`
         return id !== '' || id ? `@JournalEntry[${id}]{${text}}` : text;
     })
