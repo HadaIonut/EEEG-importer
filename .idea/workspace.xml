@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Updated module description.&#10;Added support for when EEEG will use classes to identify entities + fallback to ids.">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Release prep">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/lib/CityImporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/CityImporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/lib/ImportWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/module.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,11 @@
       <workItem from="1608325483020" duration="762000" />
       <workItem from="1608570302713" duration="169000" />
       <workItem from="1608571110754" duration="8000" />
-      <workItem from="1611388411989" duration="2634000" />
+      <workItem from="1611388411989" duration="2956000" />
+      <workItem from="1611686021191" duration="1242000" />
+      <workItem from="1612459248021" duration="119000" />
+      <workItem from="1612716865551" duration="9000" />
+      <workItem from="1613817441993" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -293,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611390671092</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Release prep">
+      <created>1611391307811</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611391307811</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +350,7 @@
     <MESSAGE value="descriptive fix" />
     <MESSAGE value="maybe sidebar fix?" />
     <MESSAGE value="Updated module description.&#10;Added support for when EEEG will use classes to identify entities + fallback to ids." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated module description.&#10;Added support for when EEEG will use classes to identify entities + fallback to ids." />
+    <MESSAGE value="Release prep" />
+    <option name="LAST_COMMIT_MESSAGE" value="Release prep" />
   </component>
 </project>

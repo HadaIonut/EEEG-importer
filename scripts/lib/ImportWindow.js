@@ -5,6 +5,11 @@ const prepareDisplayName = (folder) => {
     return prepareDisplayName(game.folders.get(folder.data.parent)) + '/' + folder.data.name;
 }
 
+const isFoundry8 = () => {
+    const foundryVersion = game.data.version;
+    return foundryVersion >= '0.8.0' && foundryVersion < '0.9.0';
+}
+
 export default class ImportWindow extends Application {
 
     static get defaultOptions() {
@@ -26,7 +31,7 @@ export default class ImportWindow extends Application {
         const locationSelector = html.find("#customLocation");
         const locationSelectorActors = html.find('#customLocationActor');
 
-        const folders = game.folders.entries;
+        const folders = isFoundry8() ? game.folders : game.folders.entries;
 
         folders.forEach((folder) => {
             if (folder.data.type === 'JournalEntry')

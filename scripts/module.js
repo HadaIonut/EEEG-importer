@@ -11,3 +11,4 @@ Hooks.on("renderSidebarTab", async (app, html) => {
         html.find(".header-actions").after(buttonDiv);
     }
 })
+
