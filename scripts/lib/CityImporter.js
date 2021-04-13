@@ -14,8 +14,9 @@ const prepareText = (rawText) => {
         let id = located[index]?.parentElement?.parentElement?.className.replace('tip', '') ||
             located[index]?.parentElement?.className.replace('tip', '') ||
             located[index]?.parentElement?.parentElement?.id ||
-            located[index]?.parentElement?.id;
-        id = id.replace(' ', '');
+            located[index]?.parentElement?.id ||
+            located[index].classList.value.replace('link-internal ', '');
+        //id = id.replace(' ', '');
         if (text.includes('Description of')) return `@JournalEntry[town]{${text}}`
         return id !== '' || id ? `@JournalEntry[${id}]{${text}}` : text;
     })
@@ -118,6 +119,7 @@ const secondPassJournals = async (ids, loadingBar) => {
         journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
         journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+-\w+-\w+-\w+-\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
         journalClone.content = journalClone.content.replace(/@JournalEntry\[undefined\]{(.*?)}/g, (_0, name) => name);
+        journalClone.content = journalClone.content.replace(/@JournalEntry\[link-internal\]{(.*?)}/g, (_0, name) => name);
         journalClone.content = journalClone.content.replace(/@JournalEntry\[tip-([\w-]+)\]{(.*?)}/g, (_0, original, name) => {
             for (const value of allJournals.values())
                 if (value.data.name.toLowerCase() === name.toLowerCase())
