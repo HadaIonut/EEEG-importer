@@ -1,4 +1,4 @@
-import {loading} from "../Utils.js";
+import {loading, capitalize} from "../Utils.js";
 
 const decodeHTML = (rawText) => {
     const txt = document.createElement("textarea");
@@ -46,8 +46,6 @@ const createActor = async (entityName, rawText, folder) => await Actor.create({
     type: 'npc',
     folder: folder
 })
-
-const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 const createAndUpdateActor = (uidToActorIdMap, createdActorsArray) => async (actorData, NPCFolder) => {
     const newActor = await createActor(actorData.name, `<div class="EEEG">${actorData.output}</div>`, NPCFolder);
@@ -117,7 +115,7 @@ const secondPassJournals = async (ids, loadingBar) => {
         loadingBar();
         const journal = allJournals.get(id);
         const journalClone = JSON.parse(JSON.stringify(journal));
-        journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
+        journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid) || ids[0].get(capitalize(uid))}]`);
         journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+-\w+-\w+-\w+-\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
         journalClone.content = journalClone.content.replace(/@JournalEntry\[undefined\]{(.*?)}/g, (_0, name) => name);
         journalClone.content = journalClone.content.replace(/@JournalEntry\[link-internal\]{(.*?)}/g, (_0, name) => name);
