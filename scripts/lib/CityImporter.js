@@ -25,7 +25,9 @@ const prepareText = (rawText) => {
 }
 
 const getTownName = (jsonData) => {
-    return (jsonData.start.match(/Description of (.*?)</))[1];
+    const parser = new DOMParser();
+    const elem = parser.parseFromString(jsonData.start, 'text/html');
+    return $(elem.body).find('.town-name')[0].getAttribute("data-town-name");
 }
 
 const createJournalEntry = async (entityName, rawText, folder) => await JournalEntry.create({
