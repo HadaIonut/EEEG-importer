@@ -139,7 +139,7 @@ const secondPassActors = async (ids) => {
         if (!actor) continue;
         const actorClone = JSON.parse(JSON.stringify(actor));
         let replaceText = actorClone.data.details.biography.value;
-        replaceText = replaceText.replace(/@JournalEntry\[tip-([\w-]+)\]{(.*?)}/g, (_0, original, name) => {
+        replaceText = replaceText.replace(/@JournalEntry\[([\w]+)\]{(.*?)}/g, (_0, original, name) => {
             for (const value of allJournals.values())
                 if (value.data.name.toLowerCase() === name.toLowerCase())
                     return `@JournalEntry[${value.data._id}]{${name}}`
