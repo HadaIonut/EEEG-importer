@@ -2,19 +2,13 @@
   "name": "EEEG-Importer",
   "title": "EEEG-Importer",
   "description": "A module that allows you to import your cities generated with Eigengrau's Generator into a collection of journal entries.",
-  "version": "1.1.0",
+  "version": "1.2",
   "minimumCoreVersion": "0.7.6",
   "compatibleCoreVersion": "0.8.3",
   "author": "HadaIonut",
-  "dependencies": [
-
-  ],
-  "esmodules": [
-    "/scripts/module.js"
-  ],
-  "styles": [
-    "/styles/module.css"
-  ],
+  "dependencies": [],
+  "esmodules": ["/scripts/module.js"],
+  "styles": ["/styles/module.css"],
   "languages": [
     {
       "lang": "en",
@@ -23,6 +17,6 @@
     }
   ],
   "url": "https://github.com/HadaIonut/EEEG-importer",
-  "manifest": "",
-  "download": ""
+  "manifest": "https://github.com/HadaIonut/EEEG-importer/releases/latest/download/module.json",
+  "download": "https://github.com/HadaIonut/EEEG-importer/releases/download/1.1.5/module.zip"
 }
