@@ -1,0 +1,21 @@
+{
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "editor.formatOnSave": true,
+      "source.fixAll.eslint": true,
+      "source.organizeImports": true
+    },
+    "[markdown]": {
+      "editor.wordWrap": "bounded",
+      "editor.wordWrapColumn": 80,
+      "editor.quickSuggestions": false
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+    },
+    "editor.formatOnSave": true,
+    "prettier.semi": false,
+    "highlight.maxMatches": 250,
+    "liveServer.settings.port": 5501,
+  }
+  
