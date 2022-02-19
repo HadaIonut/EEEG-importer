@@ -1,0 +1,8 @@
+// .babelrc
+{
+  "presets": [
+      ["@babel/preset-typescript", {
+          "modules": false
+      }]
+  ]
+}
