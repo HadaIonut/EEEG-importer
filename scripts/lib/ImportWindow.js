@@ -33,7 +33,7 @@ export default class ImportWindow extends Application {
 
         const folders = isFoundry8() ? game.folders : game.folders.entries;
 
-        folders.forEach((folder) => {
+        game.folders.forEach((folder) => {
             if (folder.data.type === 'JournalEntry')
                 locationSelector.append(new Option(prepareDisplayName(folder), folder.data._id));
             if (folder.data.type === 'Actor')
