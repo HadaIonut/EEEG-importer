@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="Release prep">
+    <list default="true" id="6d538012-f92f-483f-b3e1-d7f3fcd6b66b" name="Default Changelist" comment="merged PR and fixed version display">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module.json" beforeDir="false" afterPath="$PROJECT_DIR$/module.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -129,6 +133,7 @@
       <workItem from="1634825891412" duration="1736000" />
       <workItem from="1634827790583" duration="209000" />
       <workItem from="1645263446073" duration="1112000" />
+      <workItem from="1645264571940" duration="1935000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1604937546780</created>
@@ -312,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611391307811</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="merged PR and fixed version display">
+      <created>1645264727310</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1645264727311</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +369,8 @@
     <MESSAGE value="maybe sidebar fix?" />
     <MESSAGE value="Updated module description.&#10;Added support for when EEEG will use classes to identify entities + fallback to ids." />
     <MESSAGE value="Release prep" />
-    <option name="LAST_COMMIT_MESSAGE" value="Release prep" />
+    <MESSAGE value="merged PR and fixed version display" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged PR and fixed version display" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
