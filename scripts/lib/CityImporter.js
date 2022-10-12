@@ -51,14 +51,14 @@ const createActor = async (entityName, rawText, folder) => await Actor.create({
 
 const createAndUpdateActor = (uidToActorIdMap, createdActorsArray) => async (actorData, NPCFolder) => {
     const newActor = await createActor(actorData.name, `<div class="EEEG">${actorData.output}</div>`, NPCFolder);
-    uidToActorIdMap.set(actorData.key, newActor.data._id);
-    createdActorsArray.push(newActor.data._id);
+    uidToActorIdMap.set(actorData.key, newActor.id);
+    createdActorsArray.push(newActor.id);
 }
 
 const createAndUpdateJournal = (uidToIdMap, createdArray) => async (journalData, folder) => {
     const newEntry = await createJournalEntry(journalData.name, `<div class="EEEG">${journalData.output}</div>`, folder);
-    uidToIdMap.set(journalData.key, newEntry.data._id);
-    createdArray.push(newEntry.data._id);
+    uidToIdMap.set(journalData.key, newEntry.id);
+    createdArray.push(newEntry.id);
 }
 
 const parseSecAttributes = (NPCsAsActors, folderId, loadingBar, hasCustomNPCLocation, location) =>
@@ -79,8 +79,8 @@ const parseSecAttributes = (NPCsAsActors, folderId, loadingBar, hasCustomNPCLoca
             loadingBar();
 
             if (NPCsAsActors && attributeType === 'NPCs')
-                await createActor(primaryAttribute[secAttribute], hasCustomNPCLocation[1] ? location[1] : NPCFolder.data._id);
-            await createJournal(primaryAttribute[secAttribute], hasCustomNPCLocation[0] && attributeType === 'NPCs' ? location[0] : folder.data._id);
+                await createActor(primaryAttribute[secAttribute], hasCustomNPCLocation[1] ? location[1] : NPCFolder.id);
+            await createJournal(primaryAttribute[secAttribute], hasCustomNPCLocation[0] && attributeType === 'NPCs' ? location[0] : folder.id);
         }
     }
 
@@ -90,7 +90,7 @@ const parseMainAttributes = async (attribute, cityName, attributeData, folderId,
     name = name === 'town' ? `Description of ${cityName}` : name;
 
     const newEntry = await createJournalEntry(name, attributeData, folderId);
-    createdArray.push(newEntry.data._id);
+    createdArray.push(newEntry.id);
 }
 
 const iterateJson = async (jsonData, cityName, folderId, NPCsAsActors, loadingBar, parseSecAttr) => {
@@ -117,14 +117,14 @@ const secondPassJournals = async (ids, loadingBar) => {
         loadingBar();
         const journal = allJournals.get(id);
         const journalClone = JSON.parse(JSON.stringify(journal));
-        journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid) || ids[0].get(capitalize(uid))}]`);
-        journalClone.content = journalClone.content.replace(/@JournalEntry\[(\w+-\w+-\w+-\w+-\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
-        journalClone.content = journalClone.content.replace(/@JournalEntry\[undefined\]{(.*?)}/g, (_0, name) => name);
-        journalClone.content = journalClone.content.replace(/@JournalEntry\[link-internal\]{(.*?)}/g, (_0, name) => name);
-        journalClone.content = journalClone.content.replace(/@JournalEntry\[tip-([\w-]+)\]{(.*?)}/g, (_0, original, name) => {
+        journalClone.pages[0].text.content = journalClone.pages[0].text.content.replace(/@JournalEntry\[(\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid) || ids[0].get(capitalize(uid))}]`);
+        journalClone.pages[0].text.content = journalClone.pages[0].text.content.replace(/@JournalEntry\[(\w+-\w+-\w+-\w+-\w+)\]/g, (_0, uid) => `@JournalEntry[${ids[0].get(uid)}]`);
+        journalClone.pages[0].text.content = journalClone.pages[0].text.content.replace(/@JournalEntry\[undefined\]{(.*?)}/g, (_0, name) => name);
+        journalClone.pages[0].text.content = journalClone.pages[0].text.content.replace(/@JournalEntry\[link-internal\]{(.*?)}/g, (_0, name) => name);
+        journalClone.pages[0].text.content = journalClone.pages[0].text.content.replace(/@JournalEntry\[tip-([\w-]+)\]{(.*?)}/g, (_0, original, name) => {
             for (const value of allJournals.values())
-                if (value.data.name.toLowerCase() === name.toLowerCase())
-                    return `@JournalEntry[${value.data._id}]{${name}}`
+                if (value.name.toLowerCase() === name.toLowerCase())
+                    return `@JournalEntry[${value.id}]{${name}}`
             return name;
         })
         await journal.update(journalClone);
@@ -138,16 +138,16 @@ const secondPassActors = async (ids) => {
         const actor = allActors.get(id);
         if (!actor) continue;
         const actorClone = JSON.parse(JSON.stringify(actor));
-        let replaceText = actorClone.data.details.biography.value;
+        let replaceText = actorClone.system.details.biography.value;
         replaceText = replaceText.replace(/@JournalEntry\[([\w]+)\]{(.*?)}/g, (_0, original, name) => {
             for (const value of allJournals.values())
-                if (value.data.name.toLowerCase() === name.toLowerCase())
-                    return `@JournalEntry[${value.data._id}]{${name}}`
+                if (value.name.toLowerCase() === name.toLowerCase())
+                    return `@JournalEntry[${value.id}]{${name}}`
             return name;
         });
         replaceText = replaceText.replace(/@JournalEntry\[(\w+-\w+-\w+-\w+-\w+)\]/g, (_0, uid) => `@Actor[${ids[0].get(uid)}]`);
         replaceText = replaceText.replace(/@Actor\[undefined\]{(.*?)}/g, (_0, name) => name);
-        actorClone.data.details.biography.value = replaceText;
+        actorClone.system.details.biography.value = replaceText;
         await actor.update(actorClone);
     }
 }
@@ -169,9 +169,9 @@ const createCity = async (rawText, NPCsAsActors, hasCustomNPCLocation, location)
     const townName = getTownName(jsonData);
 
     const mainFolder = await Folder.create({name: townName, type: 'JournalEntry', parent: null});
-    const secAttrParser = parseSecAttributes(NPCsAsActors, mainFolder.data._id, loadingBar, hasCustomNPCLocation, location);
+    const secAttrParser = parseSecAttributes(NPCsAsActors, mainFolder.id, loadingBar, hasCustomNPCLocation, location);
 
-    const ids = await iterateJson(jsonData, townName, mainFolder.data._id, NPCsAsActors, loadingBar, secAttrParser);
+    const ids = await iterateJson(jsonData, townName, mainFolder.id, NPCsAsActors, loadingBar, secAttrParser);
     ids[0][0].set('town', `Description of ${townName}`);
 
     await secondPassJournals(ids[0], loadingBar);

@@ -1,8 +1,8 @@
 import {createCity} from "./CityImporter.js"
 
 const prepareDisplayName = (folder) => {
-    if (folder.depth === 1) return folder.data.name;
-    return prepareDisplayName(game.folders.get(folder.data.parent)) + '/' + folder.data.name;
+    if (folder?.depth ?? 1 === 1) return folder?.name ?? '';
+    return prepareDisplayName(game.folders.get(folder?.parent?.id)) + '/' + folder?.name;
 }
 
 const isFoundry8 = () => {
@@ -34,10 +34,10 @@ export default class ImportWindow extends Application {
         const folders = isFoundry8() ? game.folders : game.folders.entries;
 
         game.folders.forEach((folder) => {
-            if (folder.data.type === 'JournalEntry')
-                locationSelector.append(new Option(prepareDisplayName(folder), folder.data._id));
-            if (folder.data.type === 'Actor')
-                locationSelectorActors.append(new Option(prepareDisplayName(folder), folder.data._id));
+            if (folder.type === 'JournalEntry')
+                locationSelector.append(new Option(prepareDisplayName(folder), folder.id));
+            if (folder.type === 'Actor')
+                locationSelectorActors.append(new Option(prepareDisplayName(folder), folder.id));
         });
 
         html.find("#submit").on('click', () => {
